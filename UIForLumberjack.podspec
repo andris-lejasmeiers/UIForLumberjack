@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
 
                    DESC
 
-  s.homepage     = "https://github.com/burczyk/UIForLumberjack"
+  s.homepage     = "https://github.com/uptscs/UIForLumberjack"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Kamil Burczyk" => "kamil.burczyk@gmail.com" }
   s.platform     = :ios, '6.0'
-  s.source       = { :git => "https://github.com/burczyk/UIForLumberjack.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/uptscs/UIForLumberjack.git", :tag => "1.0.3" }
   s.source_files  = 'UIForLumberjack', 'UIForLumberjack/**/*.{h,m}'
   s.exclude_files = 'UIForLumberjackExample'
   s.frameworks = 'UIKit', 'Foundation'
