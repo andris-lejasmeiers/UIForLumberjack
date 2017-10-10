@@ -73,12 +73,12 @@ NSString *const LogCellReuseIdentifier = @"LogCell";
         if(_tableView.contentOffset.y + _tableView.bounds.size.height >= _tableView.contentSize.height)
             scroll = YES;
         
-        
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_messages.count-1 inSection:0];
-        [_tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
-        
-        if(scroll) {
-            [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        if (indexPath.row < [_tableView numberOfRowsInSection:indexPath.section] - 1) {
+            [_tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+            if(scroll) {
+                [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+            }
         }
     });
 }
